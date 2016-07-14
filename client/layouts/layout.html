@@ -1,0 +1,11 @@
+<template name="mainLayout">
+	<div class="">	
+		{{>helper}}
+	 	{{>header}}
+		<!-- PAGE -->
+		<section>
+			{{>Template.dynamic template=content}}
+		</section>
+		{{>footer}}
+	</div>
+</template>
