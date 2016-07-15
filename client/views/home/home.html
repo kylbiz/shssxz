@@ -4,9 +4,7 @@
 		<div class="container">
 			<div class="my-slider">
 				<ul>
-					<li>
-						<img src="/image/home/banner/banner1.jpg" alt="">
-					</li>
+					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
 					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
 					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
 					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
@@ -25,31 +23,99 @@
 			  </ol>
 			</nav>
 		</div>
-		
 	</div>
 	<div class="container-content">
 		<div class="container">
 			<div class="left">
 				<div class="news">
 					<div class="content-title">
-						<div>
-							<span>园区新闻</span><span>|</span><span>园区公告</span>
-						</div>
-						<div>
-							
-						</div>
-
+						<span class="span-active" val="news">园区新闻</span>
+						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span val="notice">园区公告</span>
+						<span class="more">更多</span>
+					</div>
+					<div class="left-content">
+						{{#if noticeNews = 'news'}}
+							{{#each news}}
+								<p class="pnews">{{text}}<time>{{time}}</time></p>
+							{{/each}}
+						{{else}}
+							{{#each notice}}
+								<p>{{text}}<time>{{time}}</time></p>
+							{{/each}}
+						{{/if}}
 					</div>
 				</div>
 				<div class="window">
-					
+					<div class="content-title">
+						<span class="span-active">企业之窗</span>
+						<span class="more">更多</span>
+					</div>
+					<div class="left-content">
+						{{#each imgContent}}
+							<div class="img-content">
+								<img src="{{url}}" alt="">
+								<p>{{text}}</p>
+							</div>
+						{{/each}}
+					</div>
 				</div>
 				<div class="transfer">
-					
+					<div class="content-title">
+						<span class="span-active">区位交通</span>
+						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span>自驾</span>
+						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+						<span>公交</span>
+						<span class="more">更多</span>
+					</div>
+					<div class="left-content">
+						<div class="transfer-img">
+							<img src="/image/home/transfer/trans.jpg" alt="">
+						</div>
+						<div class="transfer-text">
+							<div class="transfer-detail">
+								<p class="customer">浦东客户</p>
+								<p>嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）
+——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+							</div>
+							<div class="transfer-detail">
+								<p class="customer">浦西客户</p>
+								<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转
+（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+								<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）
+——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）......</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="right">
-				
+				<div class="service">
+					<div class="content-title" style="padding:17px 16px;">
+						<span class="span-active">服务导向</span>
+					</div>
+					<div class="right-content">
+						{{#each serviceimg}}
+							<div class="serviceimg">
+								<div class="text">
+									<p>{{imgtext}}</p>
+								</div>
+								<img src="{{url}}" alt="">
+							</div>
+						{{/each}}
+					</div>
+				</div>
+				<div class="foucsus">
+					<div class="content-title" style="height: 32px;">
+						<span class="span-active">关注我们</span>
+					</div>
+					<div class="right-content">
+						<img src="/image/home/foucs.jpg" alt="">
+						<p>扫一扫二维码</p>
+						<p class="focusp">关注莘莘学子创业园</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
