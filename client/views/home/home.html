@@ -1,7 +1,10 @@
 <!-- 首页 -->
 <template name="home">
 	<div class="container-slider">
-		<div class="container">
+		<div class="clearfix">
+			
+		</div>
+		<div class="container-slider-inline">
 			<div class="my-slider">
 				<ul>
 					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
@@ -25,7 +28,7 @@
 		</div>
 	</div>
 	<div class="container-content">
-		<div class="container">
+		<div class="container-home">
 			<div class="left">
 				<div class="news">
 					<div class="content-title">
@@ -35,15 +38,9 @@
 						<span class="more">更多</span>
 					</div>
 					<div class="left-content">
-						{{#if noticeNews = 'news'}}
-							{{#each news}}
-								<p class="pnews">{{text}}<time>{{time}}</time></p>
-							{{/each}}
-						{{else}}
-							{{#each notice}}
-								<p>{{text}}<time>{{time}}</time></p>
-							{{/each}}
-						{{/if}}
+						{{#each news}}
+							<p class="pnews">{{text}}<time>{{time}}</time></p>
+						{{/each}}
 					</div>
 				</div>
 				<div class="window">
@@ -76,15 +73,14 @@
 						<div class="transfer-text">
 							<div class="transfer-detail">
 								<p class="customer">浦东客户</p>
-								<p>嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）
-——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+								<p>嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
 							</div>
 							<div class="transfer-detail">
 								<p class="customer">浦西客户</p>
-								<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转
-（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
-								<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）
-——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）......</p>
+								<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+								<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）</p>
+								<p style="padding-top:0">——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）......<span>更多</span></p>
+
 							</div>
 						</div>
 					</div>

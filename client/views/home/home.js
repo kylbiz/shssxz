@@ -12,12 +12,6 @@ Template.home.onRendered(function () {
 				next: '<a class="unslider-arrow nexth"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></a>',
 			},
 		});
-		$('.news .content-title span').click(function (e) {
-			var target = e.currentTarget;
-			var value = $(target).attr('val');
-			Session.set('news',value);
-			console.log(Session.get('news'));
-		});
 	});
 });
 
@@ -82,9 +76,6 @@ Template.home.helpers({
 			},
 
 		]
-	},
-	noticeNews:function(){
-		return Session.get('news')||'news';
 	},
 	serviceimg:function(){
 		return [
