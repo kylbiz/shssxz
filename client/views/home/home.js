@@ -12,6 +12,23 @@ Template.home.onRendered(function () {
 				next: '<a class="unslider-arrow nexth"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></a>',
 			},
 		});
+
+		$('.news .content-title span').click(function (e) {
+			var target = e.target;
+			var val = $(target).attr('val');
+			// console.log('val',val);
+			if(val == null){
+				return;
+			}
+			var that = this;
+			$(this).addClass('span-news').siblings().removeClass('span-news');
+			$('.news .left-content div').each(function(event) {
+				var data = $(this).attr('data-news');
+				if(data ==val){
+					$(this).removeClass('hide').siblings().addClass('hide');
+				}
+			});
+		});
 	});
 });
 
@@ -39,7 +56,7 @@ Template.home.helpers({
 	notice:function(){
 		return [
 			{
-				text:'APEC11111商务签证服务',
+				text:'AP公告商务签证服务',
 				time:'2011-01-12'
 			},
 			{

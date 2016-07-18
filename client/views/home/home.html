@@ -7,24 +7,63 @@
 		<div class="container-slider-inline">
 			<div class="my-slider">
 				<ul>
-					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
-					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
-					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
-					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
-					<li><img src="/image/home/banner/banner1.jpg" alt=""></li>
+					<li>
+						<div class="slider-content">
+							<p class="title"><span>承载理想</span><span>开创未来</span></p>
+							<div class="detail">
+								<p>上海莘莘学子创业园成立18周年</p>
+								<p>国家级留学生创业园成立13周年</p>
+							</div>
+							<a href="/overview" target="_blank">了解莘莘学子</a>
+						</div>
+						<img src="/image/home/banner/banner1.jpg" alt="">
+					</li>
+					<li>
+						<div class="slider-content">
+							<p class="title"><span>承载理想</span><span>开创未来</span></p>
+							<div class="detail">
+								<p>上海莘莘学子创业园成立18周年</p>
+								<p>国家级留学生创业园成立13周年</p>
+							</div>
+							<a href="/overview" target="_blank">了解莘莘学子</a>
+						</div>
+						<img src="/image/home/banner/banner1.jpg" alt="">
+					</li>
+					<li>
+						<div class="slider-content">
+							<p class="title"><span>承载理想</span><span>开创未来</span></p>
+							<div class="detail">
+								<p>上海莘莘学子创业园成立18周年</p>
+								<p>国家级留学生创业园成立13周年</p>
+							</div>
+							<a href="/overview" target="_blank">了解莘莘学子</a>
+						</div>
+						<img src="/image/home/banner/banner1.jpg" alt="">
+					</li>
+					<li>
+						<div class="slider-content">
+							<p class="title"><span>承载理想</span><span>开创未来</span></p>
+							<div class="detail">
+								<p>上海莘莘学子创业园成立18周年</p>
+								<p>国家级留学生创业园成立13周年</p>
+							</div>
+							<a href="/overview" target="_blank">了解莘莘学子</a>
+						</div>
+						<img src="/image/home/banner/banner1.jpg" alt="">
+					</li>
+					<li>
+						<div class="slider-content">
+							<p class="title"><span>承载理想</span><span>开创未来</span></p>
+							<div class="detail">
+								<p>上海莘莘学子创业园成立18周年</p>
+								<p>国家级留学生创业园成立13周年</p>
+							</div>
+							<a href="/overview" target="_blank">了解莘莘学子</a>
+						</div>
+						<img src="/image/home/banner/banner1.jpg" alt="">
+					</li>
 				</ul>
 			</div>
-		</div>
-		<div class="my-nav">
-			<nav class="unslider-nav">
-			  <ol>
-			    <li data-slide="0">1</li>
-			    <li data-slide="1">2</li>
-			    <li data-slide="2">3</li>
-			    <li data-slide="3">4</li>
-			    <li data-slide="4">5</li>
-			  </ol>
-			</nav>
 		</div>
 	</div>
 	<div class="container-content">
@@ -32,15 +71,22 @@
 			<div class="left">
 				<div class="news">
 					<div class="content-title">
-						<span class="span-active" val="news">园区新闻</span>
+						<span class="span-news" val="news">园区新闻</span>
 						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 						<span val="notice">园区公告</span>
 						<span class="more">更多</span>
 					</div>
 					<div class="left-content">
-						{{#each news}}
-							<p class="pnews">{{text}}<time>{{time}}</time></p>
-						{{/each}}
+						<div data-news = "news">
+							{{#each news}}
+								<p class="pnews">{{text}}<time>{{time}}</time></p>
+							{{/each}}
+						</div>
+						<div class="hide" data-news="notice">
+							{{#each notice}}
+								<p class="pnews">{{text}}<time>{{time}}</time></p>
+							{{/each}}
+						</div>
 					</div>
 				</div>
 				<div class="window">
@@ -59,9 +105,9 @@
 				</div>
 				<div class="transfer">
 					<div class="content-title">
-						<span class="span-active">区位交通</span>
+						<span>区位交通</span>
 						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span>自驾</span>
+						<span class="active">自驾</span>
 						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 						<span>公交</span>
 						<span class="more">更多</span>

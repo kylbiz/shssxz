@@ -1,0 +1,77 @@
+<!-- 扶持政策 -->
+<template name="support">
+	<div class="container-pages">
+		{{>Template.dynamic template=support}}
+	</div>
+</template>
+
+<template name="download">
+	<div class="container-download">
+		<div class="left">
+			<div class="left-title">
+				<span>相关文件</span>
+			</div>
+			<div class="left-content" style="height: 472px;">				
+				{{#each files}}
+					<a href="" title=""><p>{{text}}<time>{{time}}</time></p></a>
+				{{/each}}
+			</div>
+			{{>paginator}}
+		</div>
+		<div class="right">
+			<div class="right-title">
+				<span>行业政策</span>
+			</div>
+			<div class="right-content">
+				{{#each policy}}
+					<a href="" title=""><p>{{text}}</p></a>
+				{{/each}}
+				<p class="more"><a href="" title="">更多...</a></p>
+				<div class="weixinma">
+					<p>扫描二维码关注微信</p>
+					<img src="/image/home/foucs.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="search">
+	<div class="container-download">
+		<div class="left">
+			<div class="left-title">
+				<span>搜索政策</span>
+			</div>
+			<div class="search-left-content left-content " style="">
+				<form class="search">
+					<input type="text" name="">
+					<button type="">搜索政策</button>
+				</form>
+			</div>
+			<div class="left-title">
+				<span style="color:#000;">行业政策</span>
+			</div>
+			<div class="left-content">			
+				{{#each policy}}
+					<a href="" title=""><p>{{text}}<time>{{time}}</time></p></a>
+				{{/each}}
+			</div>
+			{{>paginator}}
+		</div>
+		<div class="right">
+			<div class="right-title">
+				<span>相关文件</span>
+			</div>
+			<div class="right-content">
+				{{#each files}}
+					<a href="" title=""><p>{{text}}</p></a>
+				{{/each}}
+				<p class="more"><a href="" title="">更多...</a></p>
+				<div class="weixinma">
+					<p>扫描二维码关注微信</p>
+					<img src="/image/home/foucs.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

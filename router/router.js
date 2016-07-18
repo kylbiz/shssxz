@@ -10,12 +10,40 @@ var overview = FlowRouter.group({
   name: 'overviewGroup'
 });
 
-overview.route('/', {
-  name: 'overview',
-  action: function() {
-    BlazeLayout.render("mainLayout", {content: "overview"});
-  }
-});
+  overview.route('/', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "profile"});
+    }
+  });
+  //总体规划
+  overview.route('/total', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "total"});
+    }
+  });
+  //部门职能
+  overview.route('/functions', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "functions"});
+    }
+  });
+  //交通路线
+  overview.route('/roate', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "roate"});
+    }
+  });
+  //联系我们
+  overview.route('/contactus', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "contactus"});
+    }
+  });
 //公司注册
 var coregister = FlowRouter.group({
   prefix: "/coregister",
@@ -68,15 +96,38 @@ support.route('/', {
   }
 });
 
+support.route('/download', {
+  name: 'support',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "support", support: "download"});
+  }
+});
+
+support.route('/search', {
+  name: 'support',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "support", support: "search"});
+  }
+});
+
+
+
 //媒体中心
 var media = FlowRouter.group({
   prefix: "/media",
   name: 'media'
 });
 
-media.route('/', {
+media.route('/parknews', {
   name: 'media',
   action: function() {
-    BlazeLayout.render("mainLayout", {content: "media"});
+    BlazeLayout.render("mainLayout", {content: "media",media: "parknews"});
+  }
+});
+
+media.route('/parknotice', {
+  name: 'media',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "media",media: "parknotice"});
   }
 });
