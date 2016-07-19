@@ -3,7 +3,7 @@ Template.cohome.onRendered(function () {
 		$('.cohome-title div').click(function (e) {
 			var target = e.target;
 			var val = $(target).attr('val');
-			console.log('val',val);
+			$(target).addClass('textactive').siblings().removeClass('textactive');
 			Session.set('show', val);
 		});
 	});

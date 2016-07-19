@@ -23,6 +23,13 @@ var overview = FlowRouter.group({
       BlazeLayout.render("mainLayout", {content: "overview",overview: "total"});
     }
   });
+  //发展历程
+  overview.route('/develop', {
+    name: 'overview',
+    action: function() {
+      BlazeLayout.render("mainLayout", {content: "overview",overview: "develop"});
+    }
+  });
   //部门职能
   overview.route('/functions', {
     name: 'overview',
@@ -44,6 +51,19 @@ var overview = FlowRouter.group({
       BlazeLayout.render("mainLayout", {content: "overview",overview: "contactus"});
     }
   });
+
+//意见反馈
+var feedback = FlowRouter.group({
+  prefix: "/feedback",
+  name: 'feedbackGroup'
+});
+feedback.route('/', {
+  name: 'feedback',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "feedback"});
+  }
+});
+
 //公司注册
 var coregister = FlowRouter.group({
   prefix: "/coregister",
@@ -53,7 +73,28 @@ var coregister = FlowRouter.group({
 coregister.route('/', {
   name: 'coregister',
   action: function() {
-    BlazeLayout.render("mainLayout", {content: "coregister"});
+    BlazeLayout.render("mainLayout", {content: "coregister",coregister: "register"});
+  }
+});
+
+coregister.route('/information', {
+  name: 'coregister',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "coregister",coregister: "information"});
+  }
+});
+coregister.route('/special', {
+  name: 'coregister',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "coregister",coregister: "specialService"});
+  }
+});
+
+//经营范围
+coregister.route('/range', {
+  name: 'coregister',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "coregister",coregister: "range"});
   }
 });
 

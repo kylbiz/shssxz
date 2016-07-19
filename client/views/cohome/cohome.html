@@ -2,14 +2,16 @@
 <template name="cohome">
 	<div class="container-pages">
 		<div class="container-cohome">
-			<p class="title">企业之家</p>
-			<div class="cohome-title">
-				<div class="active" val="homeTrade">贸易型企业</div>
-				<div class="" val="homeService">服务型企业</div>
-				<div class="" val="homeProduce">生产型企业</div>
-			</div>
-			<div class="cohome-show">
-				{{>Template.dynamic template=_show}}
+			<div class="gap">
+				<p class="title">企业之家</p>
+				<div class="cohome-title">
+					<div class="textactive" val="homeTrade">贸易型企业</div>
+					<div class="" val="homeService">服务型企业</div>
+					<div class="" val="homeProduce">生产型企业</div>
+				</div>
+				<div class="cohome-show">
+					{{>Template.dynamic template=_show}}
+				</div>
 			</div>
 		</div>
 	</div>

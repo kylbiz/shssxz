@@ -2,27 +2,29 @@
 <template name="overview">
 	<div class="container-pages">
 		<div class="container-overview">
-			<div class="overview-title">
-				<div class="overview-img">
-					<img src="/image/home/cowin/meilinge.jpg" alt="园区概况">
+			<div class="gap">
+				<div class="overview-title">
+					<div class="overview-img">
+						<img src="/image/home/cowin/meilinge.jpg" alt="园区概况">
+					</div>
+					<div class="title-content">
+						<p>上海莘莘学子创业园</p>
+						<p>成立时间23年</p>
+						<p>地址：松江区车墩镇</p>
+					</div>
 				</div>
-				<div class="title-content">
-					<p>上海莘莘学子创业园</p>
-					<p>成立时间23年</p>
-					<p>地址：松江区车墩镇</p>
+				<div class="overview-header">
+					<ul>
+						<li><a href="/overview" class="click">园区简介</a></li>
+						<li><a href="/overview/develop">发展历程</a></li>
+						<li><a href="/overview/total">总体规划</a></li>
+						<li><a href="/overview/functions">部门职能</a></li>
+						<li><a href="/overview/roate">交通路线</a></li>
+						<li><a href="/overview/contactus">联系我们</a></li>
+					</ul>
 				</div>
+				{{>Template.dynamic template=overview}}
 			</div>
-			<div class="overview-header">
-				<ul>
-					<li><a href="/overview" class="click">园区简介</a></li>
-					<li><a href="/overview/develop">发展历程</a></li>
-					<li><a href="/overview/total">总体规划</a></li>
-					<li><a href="/overview/functions">部门职能</a></li>
-					<li><a href="/overview/roate">交通路线</a></li>
-					<li><a href="/overview/contactus">联系我们</a></li>
-				</ul>
-			</div>
-			{{>Template.dynamic template=overview}}
 		</div>
 	</div>
 </template>
@@ -39,7 +41,9 @@
 </template>
 <!-- 发展历程 -->
 <template name="develop">
-	
+	<div class="develop-content">
+		
+	</div>
 </template>
 <!-- 总体规划 -->
 <template name="total">
@@ -100,7 +104,33 @@
 <!-- 交通路线 -->
 <template name="roate">
 	<div class="overview-content">
-		<p>sadasbdhsagdajgdaksygfsyu</p>
+		<div class="overview-roate">
+			<div class="overview-img">
+				<img src="/image/overview/roate.png" alt="园区概况">
+			</div>
+			<div class="title-content">
+				<p>海莘莘学子创业园位于上海人文发源地--有"上海之根"美誉的松江城，地处松江工业重镇--车墩镇。</p>
+				<p>园区紧靠320国道线、嘉金高速公路、北松公路、沪金铁路线，距市中心25公里，至虹桥机场20公里，至沪杭高速公路新桥出入口处3公里。</p>
+				<p>周围交通纵横贯穿，十分便捷。</p>
+				<p>创业园东临上海车墩影视乐园，西望松江大学城、佘山风景区，北靠上海松江出口加工区，南毗黄浦江母亲河，是文化旅游者观光胜地，更是国内外投资者创业的理想园地。</p>
+			</div>
+		</div>
+		<p class="title">自驾</p>
+		<p>浦东客户</p>
+		<p>走申嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+		<p>浦西客户</p>
+		<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+		<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+		<p>松江客户</p>
+		<p>江城区——北松公路（往闵行方向）——接近车墩十字路口右转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+		<p class="title">公交</p>
+		<p>市区客户</p>
+		<p>线路1：路铁1号线（锦江乐园站下）——换乘沪金线——车墩站下——创嘉路步行5分钟</p>
+		<p>线路2：路铁1号线莲花路站下——换乘莲石线或莲金线、上石线——车墩站下——创嘉路步行5分钟</p>
+		<p>松江客户</p>
+		<p>松江乐都路汽车站乘松江6路或松莘线——车墩站下——创嘉路步行5分钟</p>
+		<p>松江乐都路汽车站乘松卫线或松张线——车墩站下——创嘉路步行5分钟</p>
+		<p>大学城乘松闵线——车墩站下——创嘉路步行5分钟</p>
 	</div>
 </template>
 <!-- 联系我们 -->

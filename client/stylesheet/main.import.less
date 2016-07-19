@@ -5,6 +5,10 @@
 @small-word:14px;
 @normal-word:16px;
 @ppadding:12px;
+@inforheight:264px;
+@boxheight:258px;
+@twidth:33.33%;
+@specialheight:260px;
 .helper{
 	width: 100%;
 	height: 48px;
@@ -36,8 +40,9 @@ header{
 		vertical-align:top;
 	}
 	ul{
-		width: 50%;
+		width: 42%;
 		height:72px;
+		margin-left:11.58%;
 		display:inline-block;
 		*display: inline;
 		zoom: 1; 
@@ -110,7 +115,7 @@ footer{
 			*display: inline;
 			zoom: 1; 
 			vertical-align: middle;
-			width:16.29%;
+			width:19.66%;
 			height:270px;
 			box-sizing:border-box;
 			border-left:1px solid @line-border;
@@ -409,7 +414,6 @@ section{
 			background-color:@white;
 			border-top:4px solid @index-blue;
 			.container;
-			.padding(20px);
 			.overview-title{
 				.overview-img{
 					display:inline-block;
@@ -425,6 +429,7 @@ section{
 					zoom: 1; 
 					width:60%;
 					padding:16px 0;
+					padding-left:10px;
 					p{
 						padding-top:17px;
 						padding-bottom:17px;
@@ -481,6 +486,33 @@ section{
 
 				}
 			}
+			.develop-content{
+				padding-top:20px;
+				padding-bottom:20px;
+				width:100%;
+				height:1152px;
+				background:url('/image/overview/develop.png') no-repeat;
+			}
+			.overview-roate{
+				.overview-img{
+					.inline;
+					width:40%;
+					text-align:left;
+					vertical-align:baseline;
+				}
+				.title-content{
+					.inline; 
+					width:50%;
+					padding:16px 0;
+					padding-left:10px;
+					p{
+						padding-bottom:17px;
+						&:last-child{
+							padding-bottom:0;
+						}
+					}
+				}
+			}
 			.overview-content{
 				padding-top:20px;
 				padding-bottom:20px;
@@ -517,30 +549,128 @@ section{
 				}
 			}
 		}
+		//企业注册
+		.container-coregister{
+			background-color:@white;
+			border-top:4px solid @index-blue;
+			.container;
+			p.title{
+				border-bottom:1px solid @border-gray;
+			}
+			.coregister-special{
+				width:100%;
+				height:@specialheight * 2;
+				.borderall(@border-gray);
+				.infor-special{
+					.infor-box(@twidth, @specialheight);
+					background-repeat: no-repeat;
+					background-size: cover;
+					.padding(20px);
+					.intrduce{
+						p{
+							font-size:24px;
+							color:@light-blue;
+							padding-bottom:20px;
+						}
+						span{
+							font-size:14px;
+							color:@border-gray;
+						}
+						ul{
+							padding-bottom:20px;
+							li{
+								.inline;
+								.borderall(@light-blue);
+								margin-right: 15px;
+								color:@light-blue;
+								padding:5px 10px;
+							}
+						}
+					}
+				}
+			}
+			.coregister-infor{
+				width:100%;
+				height:@inforheight * 2.5;
+				padding-top:60px;
+				.infor-process{
+					.infor-box(@width, @boxheight);
+					margin-bottom:20px;
+					text-align:center;
+				}
+				.infor-con{
+					border-left: 1px solid @border-gray;
+					border-top: 1px solid @border-gray;
+					float:left;
+					width:33.3%;
+					height:@inforheight;
+					text-align:center;
+					box-sizing:border-box;
+					cursor:pointer;
+					&:hover{
+						background-color:@light-blue;
+						border-width:0;
+						>div{
+							p{
+								color:@white;
+							}
+						}
+					}
+					&:after{
+						content:"";
+						clear:both;
+						display:block;
+					}
+					&:nth-child(3){
+						border-right:1px solid @border-gray;
+					}
+					&:nth-child(4){
+						border-bottom:1px solid @border-gray;
+					}
+					&:nth-child(5){
+						border-bottom:1px solid @border-gray;
+					}
+					&:nth-child(6){
+						border-right:1px solid @border-gray;
+						border-bottom:1px solid @border-gray;
+					}
+					>div{
+						width:@inforheight * 2;
+						height:@inforheight;
+						display:table-cell;
+						vertical-align:middle;
+						p{
+							padding-top:10px;
+							color:@light-blue;
+							font-size:20px;
+							font-weight:600;
+						}
+					}
+				}
+			}
+		}
 		//企业之家
 		.container-cohome{
 			background-color:@white;
 			border-top:4px solid @index-blue;
 			.container;
-			.padding(20px);
 			p.title{
 				font-size:@bigger-word;
 				font-weight:600;
 				color:@index-blue;
-				padding-bottom:10px;
+				padding-bottom:20px;
 			}
 			.cohome-title{
 				margin-bottom:50px;
 				padding-top:20px;
 				padding-bottom:20px;
 				border-top:1px solid @border-gray;
-				border-bottom:1px solid @border-gray;、
-				.active{
+				border-bottom:1px solid @border-gray;
+				.textactive{
 					color:@index-blue;
 				}
 				>div{
-					display:inline-block;
-					*display:inline;
+					.inline;
 					width:33%;
 					border-right:1px solid @black;
 					text-align:center;
@@ -549,7 +679,6 @@ section{
 					box-sizing:border-box;
 					vertical-align:middle;
 					cursor:pointer;
-					zoom: 1;
 					&:last-child{
 						border-right-width:0;
 					}
@@ -586,7 +715,7 @@ section{
 								color:@light-blue;
 							}
 							.intro{
-								height:130px;
+								height:120px;
 								p{
 									text-align:left;
 									font-size:14px;
@@ -677,6 +806,48 @@ section{
 						}
 					}
 				}
+				.feedback{
+					padding-top:0;
+					padding-left:0;
+					// padding-right:0;
+					padding-bottom:60px;
+					border-top:1px solid @border-gray;
+					form{
+						padding-top:40px;
+						>div{
+							padding-bottom:10px;
+							&:last-child{
+								padding-top:20px;
+								padding-left:15%;
+								input[type=submit]{
+									width:12%;
+									color: @white;
+									background-color:@index-blue;
+									border-width:0;
+								}
+							}
+							label{
+								display:inline-block;
+								*display:inline;
+								zoom: 1;
+								width:15%;
+								font-size:18px;
+								font-weight:600;
+								vertical-align:top;
+							}
+							input{
+								width:70%;
+								padding: 5px 5px;
+							}
+							textarea{
+								width:70%;
+								padding: 5px 5px;
+								height:260px;
+								vertical-align:top;
+							}
+						}
+					}
+				}
 			}
 			.right{
 				.common-right;
@@ -718,7 +889,8 @@ section{
 						p{
 							font-size:18px;
 							color:@light-blue;
-							padding-bottom:10px;
+							padding-bottom:20px;
+							line-height:30px;
 							border-bottom:1px solid @border-gray;
 						}
 						img{
