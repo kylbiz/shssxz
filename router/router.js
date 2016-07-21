@@ -172,3 +172,66 @@ media.route('/parknotice', {
     BlazeLayout.render("mainLayout", {content: "media",media: "parknotice"});
   }
 });
+
+//新闻页面
+media.route('/parknews/new1', {
+  name: 'news',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "news",news: "one"});
+  }
+});
+media.route('/parknews/new2', {
+  name: 'news',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "news",news: "two"});
+  }
+});
+media.route('/parknews/new3', {
+  name: 'news',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "news",news: "three"});
+  }
+});
+media.route('/parknews/new4', {
+  name: 'news',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "news",news: "four"});
+  }
+});
+media.route('/parknews/new5', {
+  name: 'news',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "news",news: "five"});
+  }
+});
+//公告页面
+media.route('/parknews/notice1', {
+  name: 'notice',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "notice",notice: "none"});
+  }
+});
+media.route('/parknews/notice2', {
+  name: 'notice',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "notice",notice: "ntwo"});
+  }
+});
+media.route('/parknews/notice3', {
+  name: 'notice',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "notice",notice: "nthree"});
+  }
+});
+media.route('/parknews/notice4', {
+  name: 'notice',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "notice",notice: "nfour"});
+  }
+});
+media.route('/parknews/notice5', {
+  name: 'notice',
+  action: function() {
+    BlazeLayout.render("mainLayout", {content: "notice",notice: "nfive"});
+  }
+});

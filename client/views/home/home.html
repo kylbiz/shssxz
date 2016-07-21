@@ -1,8 +1,6 @@
 <!-- 首页 -->
 <template name="home">
 	<div class="container-slider">
-		<div class="clearfix">
-		</div>
 		<div class="container-slider-inline">
 			<div class="my-slider">
 				<ul>
@@ -13,7 +11,6 @@
 								<p>上海莘莘学子创业园成立18周年</p>
 								<p>国家级留学生创业园成立13周年</p>
 							</div>
-							<a href="/overview" target="_blank">了解莘莘学子</a>
 						</div>
 						<img src="/image/home/banner/banner1.jpg" alt="">
 					</li>
@@ -24,7 +21,6 @@
 								<p>上海莘莘学子创业园成立18周年</p>
 								<p>国家级留学生创业园成立13周年</p>
 							</div>
-							<a href="/overview" target="_blank">了解莘莘学子</a>
 						</div>
 						<img src="/image/home/banner/banner1.jpg" alt="">
 					</li>
@@ -35,7 +31,6 @@
 								<p>上海莘莘学子创业园成立18周年</p>
 								<p>国家级留学生创业园成立13周年</p>
 							</div>
-							<a href="/overview" target="_blank">了解莘莘学子</a>
 						</div>
 						<img src="/image/home/banner/banner1.jpg" alt="">
 					</li>
@@ -46,7 +41,6 @@
 								<p>上海莘莘学子创业园成立18周年</p>
 								<p>国家级留学生创业园成立13周年</p>
 							</div>
-							<a href="/overview" target="_blank">了解莘莘学子</a>
 						</div>
 						<img src="/image/home/banner/banner1.jpg" alt="">
 					</li>
@@ -57,7 +51,6 @@
 								<p>上海莘莘学子创业园成立18周年</p>
 								<p>国家级留学生创业园成立13周年</p>
 							</div>
-							<a href="/overview" target="_blank">了解莘莘学子</a>
 						</div>
 						<img src="/image/home/banner/banner1.jpg" alt="">
 					</li>
@@ -70,20 +63,25 @@
 			<div class="left">
 				<div class="news">
 					<div class="content-title">
-						<span class="span-news" val="news">园区新闻</span>
-						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span val="notice">园区公告</span>
+						<span class="span-active blue" >园区动态</span>
+						<span class="span-news" val="news">新闻</span>
+						<span class="line">&nbsp;|&nbsp;</span>
+						<span val="notice">公告</span>
 						<span class="more">更多</span>
 					</div>
-					<div class="left-content">
+					<div class="left-content" style="padding-top:20px;padding-bottom: 21px;">
 						<div data-news = "news">
 							{{#each news}}
-								<p class="pnews">{{text}}<time>{{time}}</time></p>
+								<a href="{{newsurl}}" title="" target="_blank">
+									<p class="pnews">{{text}}<time>{{time}}</time></p>
+								</a>
 							{{/each}}
 						</div>
 						<div class="hide" data-news="notice">
 							{{#each notice}}
-								<p class="pnews">{{text}}<time>{{time}}</time></p>
+								<a href="{{newsurl}}" title="" target="_blank">
+									<p class="pnews">{{text}}<time>{{time}}</time></p>
+								</a>
 							{{/each}}
 						</div>
 					</div>
@@ -104,36 +102,23 @@
 				</div>
 				<div class="transfer">
 					<div class="content-title">
-						<span>区位交通</span>
+						<span class="weight">区位交通</span>
+						<span class="active" val="selfdrive">自驾</span>
 						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span class="active">自驾</span>
-						<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-						<span>公交</span>
+						<span val="transportation">公交</span>
 						<span class="more">更多</span>
 					</div>
-					<div class="left-content">
+					<div class="left-content" style="height: 233px;">
 						<div class="transfer-img">
 							<img src="/image/home/transfer/trans.jpg" alt="">
 						</div>
-						<div class="transfer-text">
-							<div class="transfer-detail">
-								<p class="customer">浦东客户</p>
-								<p>嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
-							</div>
-							<div class="transfer-detail">
-								<p class="customer">浦西客户</p>
-								<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
-								<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）</p>
-								<p style="padding-top:0">——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）......<span>更多</span></p>
-
-							</div>
-						</div>
+						{{>Template.dynamic template=_trans}}
 					</div>
 				</div>
 			</div>
 			<div class="right">
 				<div class="service">
-					<div class="content-title" style="padding:17px 16px;">
+					<div class="content-title" style="padding:16px 16px;">
 						<span class="span-active">服务导向</span>
 					</div>
 					<div class="right-content">
@@ -148,7 +133,7 @@
 					</div>
 				</div>
 				<div class="foucsus">
-					<div class="content-title" style="height: 32px;">
+					<div class="content-title">
 						<span class="span-active">关注我们</span>
 					</div>
 					<div class="right-content">
@@ -158,6 +143,37 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</template>
+
+<template name = "selfdrive">
+	<div class="transfer-text">
+		<div class="transfer-detail">
+			<p class="customer">浦东客户</p>
+			<p>嘉湖高速（S32）从浦东机场口上——松卫北路口下——转入北松公路（往闵行方向行驶）——创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+		</div>
+		<div class="transfer-detail">
+			<p class="customer">浦西客户</p>
+			<p>线路1：走沪昆高速（G60）从莘庄口上——新桥口下——转入新车公路——北松公路右转（松江方向）——紧接着左转入创嘉路到底（上海莘莘学子创业投资有限公司）</p>
+			<p>线路2：从莘庄方向过来客户——走北松公路（往松江方向）</p>
+			<p style="padding-top:0">——到车墩十字路口左转入创嘉路到底（上海莘莘学子创业投资有限公司）......<span>更多</span></p>
+		</div>
+	</div>
+</template>
+
+<template name = "transportation">
+	<div class="transfer-text">
+		<div class="transfer-detail songjiang">
+			<p class="customer">市区客户</p>
+			<p>线路1：路铁1号线（锦江乐园站下）——换乘沪金线——车墩站下——创嘉路步行5分钟</p>
+			<p>线路2：路铁1号线莲花路站下——换乘莲石线或莲金线、上石线——车墩站下——创嘉路步行5分钟</p>
+		</div>
+		<div class="transfer-detail songjiang">
+			<p class="customer">松江客户</p>
+			<p>松江乐都路汽车站乘松江6路或松莘线——车墩站下——创嘉路步行5分钟</p>
+			<p>松江乐都路汽车站乘松卫线或松张线——车墩站下——创嘉路步行5分钟</p>
+			<p style="padding-top:0">大学城乘松闵线——车墩站下——创嘉路步行5分钟<span>更多</span></p>		
 		</div>
 	</div>
 </template>

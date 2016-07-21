@@ -2,8 +2,8 @@ Template.coregister.onRendered(function () {
 	$('.coregister-infor .infor-con').click(function (event) {
 		var target = event.currentTarget;
 		var val = $(target).attr('val');
-		console.log('val',val);
-		window.location.href = 'http://localhost:3000/coregister/'+val;
+		FlowRouter.go('/coregister/'+val);
+		// window.location.href = 'http://demo.kyl.biz:8809/coregister/'+val;
 	})
 	$('.infor-con').each(function () {
 			var that = this;
@@ -33,7 +33,7 @@ Template.register.onRendered(function () {
 	$('.coregister-infor .infor-box').each(function (e) {
 		var target = e.target;
 		var val = $(target).index();
-		console.log(val);
+		// console.log(val);
 	});
 });
 

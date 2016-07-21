@@ -2,9 +2,16 @@
 @border-top-width:4px;
 @padding-default:20px;
 @width:20%;
+time{
+	color:@border-gray;
+	font-weight:100;
+}
+.blue{
+	color:@index-blue;
+}
 .helperbtn{
 	background-color:transparent;
-	border-color: @border-blue;
+	border-color: @white;
 	border-radius: 5px;
 	border-width:1px;
 	padding:3px 9px;
@@ -56,10 +63,18 @@
 	*display:inline;
 	zoom: 1;
 }
+.after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.weight{
+	font-weight:600;
+}
 .content-title{
 	padding:16px 16px;
 	span.line{
-		font-size:24px;
+		font-size:19px;
 		&:hover{
 			color:@black !important;
 		}
@@ -69,8 +84,9 @@
 		line-height:36px;
 	}
 	.span-active{
-		font-size:24px;
+		font-size:@bigger-word;
 		vertical-align:baseline;
+		.weight;
 	}
 }
 .left-content{
@@ -94,7 +110,7 @@
 		padding-bottom:0;
 		text-align:center;
 		font-weight:600;
-		font-size:18px;
+		font-size:@normal-word;
 	}
 	&:last-child{
 		padding-right: 0px;
@@ -111,13 +127,18 @@
 	cursor:pointer;
 	span{
 		padding: 0 10px;
-		font-size:24px;
+		font-size:@normal-word;
+		&:first-child{
+			padding-left:0;
+		}
 		&:hover{
 			color:@index-blue;
+			.weight;
 		}
 	}
 	.span-news{
 		color:@index-blue;
+		.weight;
 	}
 }
 
@@ -133,8 +154,13 @@
 	}
 }
 
-
-
+.pweight{
+	.weight;
+}
+.plight{
+	color:@light-blue !important;
+	font-size:18px !important;
+}
 .common-left{
 	width:@left-width;
 	display:inline-block;
@@ -147,9 +173,10 @@
 	float:right;
 	box-sizing:border-box;
 }
+
 span.string{
-	padding-right:5px;
-	font-size:24px;
+	padding-right:1px !important;
+	font-size:@normal-word;
 	border-left:1px solid @border-gray;
 }
 
@@ -215,7 +242,8 @@ p.title{
 	.right-title{
 		border-bottom:1px solid @border-gray;
 		padding-bottom:20px;
-		font-size:24px;
+		font-size:@bigger-word;
+		.weight;
 		color:@light-blue;
 	}
 	.right-content{
@@ -227,7 +255,7 @@ p.title{
 					margin-top:15px;
 				}
 				&:hover{
-					background-color:@light-blue;
+					color:@light-blue;
 				}
 				time{
 					color:@black;
@@ -247,6 +275,7 @@ p.title{
 			text-align:center;
 			p{
 				font-size:18px;
+				.weight;
 				color:@light-blue;
 				padding-bottom:10px;
 				border-bottom:1px solid @border-gray;
@@ -298,5 +327,19 @@ p.title{
 			padding: 0 10px;
 			border: solid 1px #5c95c1;
 		}
+	}
+}
+
+.songjiang{
+	p{
+		line-height:20px !important;
+	}
+}
+.imgload{
+	width:1px;
+	height:1px;
+	img{
+		height:1px;
+		width:1px;
 	}
 }

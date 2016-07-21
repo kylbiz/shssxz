@@ -23,3 +23,6 @@ jquery                  # Helpful client-side library
 natestrauser:font-awesome
 nolimits4web:swiper
 arillo:flow-router-helpers
+
+#support fot IE9
+tomwasd:history-polyfill

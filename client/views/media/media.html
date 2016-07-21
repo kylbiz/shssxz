@@ -15,18 +15,20 @@
 			</div>
 			<div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
 				{{#each parknews}}
-					<div class="content-news">
-						<div class="img">
-							<img src="{{url}}" alt="">
+				   <a href="{{newsurl}}" title="">
+						<div class="content-news">
+							<div class="img">
+								<img src="{{url}}" alt="">
+							</div>
+							<div class="text">
+								<p>{{title}}</p>
+								<p>{{text}}</p>
+							</div>
+							<div class="time">
+								<time>{{time}}</time>
+							</div>
 						</div>
-						<div class="text">
-							<p>{{title}}</p>
-							<p>{{text}}</p>
-						</div>
-						<div class="time">
-							<time>{{time}}</time>
-						</div>
-					</div>
+				   </a>
 				{{/each}}
 			</div>
 			{{>paginator}}
@@ -59,18 +61,20 @@
 			</div>
 			<div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
 				{{#each parknotice}}
-					<div class="content-news">
-						<div class="img">
-							<img src="{{url}}" alt="">
+					<a href="{{newsurl}}" title="">
+						<div class="content-news">
+							<div class="img">
+								<img src="{{url}}" alt="">
+							</div>
+							<div class="text">
+								<p>{{title}}</p>
+								<p>{{text}}</p>
+							</div>
+							<div class="time">
+								<time>{{time}}</time>
+							</div>
 						</div>
-						<div class="text">
-							<p>{{title}}</p>
-							<p>{{text}}</p>
-						</div>
-						<div class="time">
-							<time>{{time}}</time>
-						</div>
-					</div>
+					</a>
 				{{/each}}
 			</div>
 			{{>paginator}}
