@@ -128,19 +128,19 @@ Template.home.helpers({
 	imgContent:function(){
 		return [
 			{
-				url:'/image/home/cowin/dehao.jpg',
+				url:'/image/home/cowin/dehao1.jpg',
 				text:'上海德皓有限公司',
 			},
 			{
-				url:'/image/home/cowin/meilinge.jpg',
-				text:'上海美林阁餐饮经营管理有限公司',
+				url:'/image/home/cowin/baichuan1.jpg',
+				text:'上海百川连接器有限公司',
 			},
 			{
-				url:'/image/home/cowin/diyang.jpg',
-				text:'上海迪洋服饰有限公司',
+				url:'/image/home/cowin/ruisile1.jpg',
+				text:'上海瑞斯乐复合材料有限公司',
 			},
 			{
-				url:'/image/home/cowin/chuangyuan.jpg',
+				url:'/image/home/cowin/chuangyuan1.jpg',
 				text:'上海创远信息有限公司',
 			},
 
