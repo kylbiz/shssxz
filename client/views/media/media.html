@@ -1,98 +1,100 @@
 <!-- 扶持政策 -->
 <template name="media">
-	<div class="container-pages">
-		{{>Template.dynamic template=media}}
-	</div>
+    <div class="container-pages">
+        {{>Template.dynamic template=media}}
+    </div>
 </template>
-
 <template name="parknews">
-	<div class="container-media">
-		<div class="left">
-			<div class="change-title">
-				<span class="span-news" val="news"><a href="/media/parknews" title="">园区新闻</a></span>
-				<span class="string"></span>
-				<span val="notice"><a href="/media/parknotice" title="">园区公告</a></span>
-			</div>
-			<div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
-				{{#each parknews}}
-				   <a href="{{newsurl}}" title="">
-						<div class="content-news">
-							<div class="img">
-								<img src="{{url}}" alt="">
-							</div>
-							<div class="text">
-								<p>{{title}}</p>
-								<p>{{text}}</p>
-							</div>
-							<div class="time">
-								<time>{{time}}</time>
-							</div>
-						</div>
-				   </a>
-				{{/each}}
-			</div>
-			{{>paginator}}
-		</div>
-		<div class="right-container">
-			<div class="right-title">
-				<span>热门新闻</span>
-			</div>
-			<div class="right-content">
-				{{#each hotnews}}
-					<a href="" title=""><p>{{text}}</p></a>
-				{{/each}}
-				<p class="more"><a href="" title="">更多...</a></p>
-				<div class="weixinma">
-					<p>扫描二维码关注微信</p>
-					<img src="/image/home/foucs.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container-media">
+        <div class="left">
+            <div class="change-title">
+                <span class="span-news" val="news"><a href="/media/parknews" title="">园区新闻</a></span>
+                <span class="string"></span>
+                <span val="notice"><a href="/media/parknotice" title="">园区公告</a></span>
+            </div>
+            <div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
+                {{#each parknews}}
+                <a href="{{newsurl}}" title="">
+                    <div class="content-news">
+                        <div class="img">
+                            <img src="{{url}}" alt="">
+                        </div>
+                        <div class="text">
+                            <p>{{title}}</p>
+                            <p>{{text}}</p>
+                        </div>
+                        <div class="time">
+                            <time>{{time}}</time>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+            {{>paginator}}
+        </div>
+        <div class="right-container">
+            <div class="right-title">
+                <span>热门新闻</span>
+            </div>
+            <div class="right-content">
+                {{#each hotnews}}
+                <a href="" title="">
+                    <p>{{text}}</p>
+                </a>
+                {{/each}}
+                <p class="more"><a href="" title="">更多...</a></p>
+                <div class="weixinma">
+                    <p>扫描二维码关注微信</p>
+                    <img src="/image/home/foucs.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
-
 <template name="parknotice">
-	<div class="container-media">
-		<div class="left">
-			<div class="change-title">
-				<span val="news"><a href="/media/parknews" title="">园区新闻</a></span>
-				<span class="string"></span>
-				<span class="span-news" val="notice"><a href="/media/parknotice" title="">园区公告</a></span>
-			</div>
-			<div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
-				{{#each parknotice}}
-					<a href="{{newsurl}}" title="">
-						<div class="content-news">
-							<div class="img">
-								<img src="{{url}}" alt="">
-							</div>
-							<div class="text">
-								<p>{{title}}</p>
-								<p>{{text}}</p>
-							</div>
-							<div class="time">
-								<time>{{time}}</time>
-							</div>
-						</div>
-					</a>
-				{{/each}}
-			</div>
-			{{>paginator}}
-		</div>
-		<div class="right-container">
-			<div class="right-title">
-				<span>热门新闻</span>
-			</div>
-			<div class="right-content">
-				{{#each hotnews}}
-					<a href="" title=""><p>{{text}}</p></a>
-				{{/each}}
-				<p class="more"><a href="" title="">更多...</a></p>
-				<div class="weixinma">
-					<p>扫描二维码关注微信</p>
-					<img src="/image/home/foucs.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container-media">
+        <div class="left">
+            <div class="change-title">
+                <span val="news"><a href="/media/parknews" title="">园区新闻</a></span>
+                <span class="string"></span>
+                <span class="span-news" val="notice"><a href="/media/parknotice" title="">园区公告</a></span>
+            </div>
+            <div class="left-content" style="padding-right: 0;padding-bottom: 10px;border-bottom-width:0;">
+                {{#each parknotice}}
+                <a href="{{newsurl}}" title="">
+                    <div class="content-news">
+                        <div class="img">
+                            <img src="{{url}}" alt="">
+                        </div>
+                        <div class="text">
+                            <p>{{title}}</p>
+                            <p>{{text}}</p>
+                        </div>
+                        <div class="time">
+                            <time>{{time}}</time>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+            {{>paginator}}
+        </div>
+        <div class="right-container">
+            <div class="right-title">
+                <span>热门新闻</span>
+            </div>
+            <div class="right-content">
+                {{#each hotnews}}
+                <a href="" title="">
+                    <p>{{text}}</p>
+                </a>
+                {{/each}}
+                <p class="more"><a href="" title="">更多...</a></p>
+                <div class="weixinma">
+                    <p>扫描二维码关注微信</p>
+                    <img src="/image/home/foucs.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

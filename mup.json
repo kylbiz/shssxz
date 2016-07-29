@@ -11,9 +11,7 @@
       // Also, for non-standard ssh port use this
       //"sshOptions": { "port" : 49154 },
       // server specific environment variables
-      "env": {
-        "PORT": 80,
-      }
+      "env": {}
     }
   ],
   "nodeVersion": "0.10.36",
