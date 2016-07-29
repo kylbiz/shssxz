@@ -34,7 +34,7 @@ Template.parknews.helpers({
 				url: '/image/home/transfer/trans.jpg',
 				newsurl: '/media/parknews/new3',
 				title:'莘莘公司三八妇女节活动',
-				text:'阳春三月，我们迎来了第103周年的三八国际劳动妇女节',
+				text:'阳春三月，我们迎来了第103周年的三八国际劳动妇女节劳动妇女节劳动妇女节劳动妇女节劳动妇',
 				time:'2013-03-13'
 			},
 			{
@@ -48,7 +48,7 @@ Template.parknews.helpers({
 				url: '/image/home/transfer/trans.jpg',
 				newsurl: '/media/parknews/new5',
 				title:'松江车墩镇4亿元打好国家级开发区“科技牌”',
-				text:'今后5年内，车墩镇将投入4亿元用于莘莘学子创业园整体改造',
+				text:'今后5年内，车墩镇将投入4亿元用于莘莘学子创业园整体改造整体改造整体改造整体改造整体改造整体改造',
 				time:'2011-04-25'
 			},
 			{
